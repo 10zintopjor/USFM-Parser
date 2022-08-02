@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: openpecha
+Version: 0.8.17
+Summary: OpenPecha Toolkit allows state of the art for distributed standoff annotations on moving texts
+Home-page: https://github.com/OpenPoti/openpecha-toolkit
+Author: Esukhia developers
+Author-email: esukhiadev@gmail.com
+License: Apache2
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: botok (<1.0,>=0.8.8)
+Requires-Dist: Click (<8.0,>=7.1.2)
+Requires-Dist: diff-match-patch (==20181111)
+Requires-Dist: polib (<2.0,==1.1.1)
+Requires-Dist: PyYAML (<6.0,>=5.0.0)
+Requires-Dist: pylibyaml (<2.0,>=0.1.0)
+Requires-Dist: requests (<3.0,>=2.22.0)
+Requires-Dist: antx (<2.0,>=0.1.10)
+Requires-Dist: tqdm (<5.0,>=4.35.0)
+Requires-Dist: PyGithub (<2.0,>=1.43.8)
+Requires-Dist: GitPython (<4.0,>=3.1.0)
+Requires-Dist: bs4 (<1.0,>=0.0.1)
+Requires-Dist: pyewts (<1.0,>=0.1.3)
+Requires-Dist: rdflib (<6.0,>=5.0.0)
+Requires-Dist: pydantic (<2.0,>=1.7.3)
+Requires-Dist: python-docx (<1.0,>=0.8.11)
+Provides-Extra: transifex
+Requires-Dist: transifex-python (<2.0,>=1.0) ; extra == 'transifex'
+Requires-Dist: python-slugify[unidecode] (<6.0,>=5.0) ; extra == 'transifex'
+
+<h1 align="center">
+  <br>
+  <a href="https://openpecha.org"><img src="https://avatars.githubusercontent.com/u/82142807?s=400&u=19e108a15566f3a1449bafb03b8dd706a72aebcd&v=4" alt="OpenPecha" width="150"></a>
+  <br>
+</h1>
+
+<h3 align="center">OpenPecha Toolkit</h3>
+
+<!-- Replace the title of the repository -->
+
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#owner">Owner</a> •
+  <a href="#floppy_disk-install">Install</a> •
+  <a href="#docs">Docs</a>
+</p>
+<hr>
+
+## Description
+
+[![PyPI version](https://badge.fury.io/py/openpecha.svg)](https://badge.fury.io/py/openpecha)
+[![Test](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/test.yml/badge.svg)](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/test.yml)
+[![Test Coverage](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/test-coverage.yaml)
+[![Publish](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/publish.yaml/badge.svg)](https://github.com/OpenPecha-dev/openpecha-toolkit/actions/workflows/publish.yaml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+OpenPecha Toolkit allows state of the art solution for distributed standoff annotations on moving texts, in which Base layer can be edited without affecting annotations. This is made possible by our OpenPecha Native Format called `opf` (OpenPecha Format) and our collection of `importers` which can parse existing text into `opf` and `exporters` which can export `opf` text into any format (`.epub`, `.docx`, `.pdf`, etc)
+
+<!-- This section provides a high-level overview for the repo -->
+
+## Owner
+
+- [@10zinten](https://github.com/10zinten)
+
+<!-- This section lists the owners of the repo -->
+
+
+## :floppy_disk: Install
+Stable version:
+
+#### `pip install openpecha`
+
+Daily development version:
+
+#### `pip install git+https://github.com/OpenPecha/Openpecha-Toolkit`
+
+
+<!-- This section must list as bulleted list how this repo depends or is integrated with other repos -->
+
+## Docs
+
+- Documentation: [docs](https://docs.openpecha.org)
+- If you have any problems with `openpecha-toolkit`, please open [issues](https://github.com/OpenPecha-dev/openpecha-toolkit/issues/new/choose)
+
+## Developer Installation.
+```bash
+git clone https://github.com/OpenPecha-dev/openpecha-toolkit.git
+cd openpecha-toolkit
+pip install -r requirements-dev.txt
+pip install -e .
+pre-commit install
+```
+
+## Testing
+```bash
+pytest tests
+```
+<!-- This section must link to the docs which are in the root of the repository in /docs -->
+
+
+
