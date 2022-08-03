@@ -98,7 +98,7 @@ def get_segment_layer(chapter_verses_map):
     char_walker = 0
     pre_text = chapter_verses_map["pre_text"]
 
-    segment_annotation,char_walker = get_segment_annotation(pre_text,char_walker)
+    segment_annotation,char_walker,_ = get_segment_annotation(pre_text,char_walker)
     segment_annotations.update(segment_annotation)
     for chapter in chapter_verses_map:
         verse_ann_id_map = {}
@@ -108,7 +108,7 @@ def get_segment_layer(chapter_verses_map):
             segment_annotation,char_walker,ann_id = get_segment_annotation(chapter_verses_map[chapter][verse],char_walker)
             segment_annotations.update(segment_annotation)
             verse_ann_id_map.update({verse:ann_id})
-    chapter_verse_ann_id_map.update({chapter:verse_ann_id_map})
+        chapter_verse_ann_id_map.update({chapter:verse_ann_id_map})
     segment_layer = Layer(annotation_type=LayerEnum.segment,annotations=segment_annotations)
     
     return segment_layer,chapter_verse_ann_id_map      
@@ -138,11 +138,14 @@ def create_opa(alignmnet_id,chapter_verse_ann_id_map_list,base_id):
 
 
 
-def get_segment_pairs(*chapter_verse_ann_id_map_list):
+def get_segment_pairs(chapter_verse_ann_id_map_list):
     seg_pairs = {}
 
-    for ch in chapter_verse_ann_id_map_list:
-        chapter_verse_ann_id_map = chapter_verse_ann_id_map[pecha_id]
+    for sources in chapter_verse_ann_id_map_list:
+        for source in sources:
+            i = 0
+
+        
 
 
 
